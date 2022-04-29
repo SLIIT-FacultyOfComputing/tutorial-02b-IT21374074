@@ -29,14 +29,15 @@ printf("Hello World") --> std::cout << "Hello World";
 2.54cm = 1 inch
 
 ```c
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 void main(void) 
 {
     float cm, inches;
-    printf("Enter a length in cm : ");
-    scanf("%f",&cm);
+    cout<<"Enter a length in cm : ";
+    cin>>cm;
     inches = cm / 2.54;
-    printf("Length in inches is %f \n", inches);
+    cout<<"Length in inches is"<<inches;
 }   
 ```
 
@@ -60,17 +61,18 @@ OtRate = 1700
 Please Note that the input command in C++ is std::cin. This is a representation of the Keyboard.
 
 ```c
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 void main(void)
 {
    double salary, netSalary;
    int etype, otHrs, otRate;
-   printf("Enter Employee Type : ");
-   scanf("%d", &etype);
-   printf("Enter Salary  : ");
-   scanf("%f", &salary);
-   printf("Enter OtHrs : ");
-   scanf("%d", &otHrs); 
+   cout<<"Enter Employee Type :";
+   cin>>etype;
+   cout<<"Enter Salary  :";
+   cin>>salary;
+   cout<<"Enter OtHrs :";
+   cin>>otHrs; 
    
    switch (etype) {
       case 1 :
@@ -86,7 +88,7 @@ void main(void)
 
 
    netSalary = salary + otHrs* otRate;
-   printf("Net Salary is %f ", netSalary);
+   cout<<"Net Salary is<<netSalary;
 }
 ```
 
@@ -98,21 +100,22 @@ Convert the C program given below which calculates the Factorial of a number tha
 Please Note that the input command in C++ is ```std::cin```. This is a representation of the Keyboard.
 
 ```c
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 void main(void)
 {
     int no;
     long fac;
 
-    printf("Enter a Number : ");
-    scanf("%d", &no);
+    cout<<"Enter a Number :";
+    cin>>no;
 
     fac = 1;
     for (int r=no; r >= 1; r--) {
         fac = fac * r;
     }
 
-    printf("Factorial of %d is %ld\n", no, fac);    
+    cout<<"Factorial of"<<no<<"is\n"<<fac;    
 }
 ```
  
@@ -149,4 +152,12 @@ int main() {
   std::cout << std::endl;
 }
 ```
+long Factorial(int no)
+{
+return no;
+}
+long nCr(int n, int r)
+{
+return nCr = n!/ r!(n−r)!;
+}
 
